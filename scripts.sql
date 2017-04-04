@@ -32,7 +32,7 @@ insert into tab_caracteres values (6, 'R');
 insert into tab_caracteres values (7, 'A, E, I, O, U, Y, W, H');
 
 /***************************************************************************
- - Casos de testes
+ - Casos de testes Soundex
 ***************************************************************************/
 select * from valorsoundex('soundex'); --S532
 select * from valorsoundex('macoratti'); --M263
@@ -41,6 +41,28 @@ select * from valorsoundex('Rupert'); --R163
 select * from valorsoundex('Robert'); --R163
 select * from valorsoundex('Rubin'); --R150
 
-
+/***************************************************************************
+ - Casos de testes BuscaBR
+***************************************************************************/
+select * from buscabr('Wilson');--V
+select * from buscabr('Vilson');--V
+select * from buscabr('Uilson');--V
+select * from buscabr('Show');--SW
+select * from buscabr('Cowboy');--KWB
+select * from buscabr('Walter');--VT
+select * from buscabr('Valter');--VT
+select * from buscabr('Feijão');--FJ
+select * from buscabr('Feijaum');--FJ
+select * from buscabr('Uruguai');--VRG
+select * from buscabr('Fixar');--FS
+select * from buscabr('Ficsar');--FS
+select * from buscabr('Tórax');--TR
+select * from buscabr('Tóracs');--TR
+select * from buscabr('Emprego');--MPG
+select * from buscabr('Imprego');--MPG
+select * from buscabr('Habilitação');--BRTK
+select * from buscabr('Abilitação');--BRTK
+select * from buscabr('Gengibre');--JJB
+select * from buscabr('Jengibre');--JJB
 
 
